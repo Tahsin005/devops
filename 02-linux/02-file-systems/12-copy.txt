@@ -1,0 +1,16 @@
+Copy
+The copy command does what you would (hopefully) expect: it copies a file from one location to another.
+
+cp source_file.txt destination/
+
+You can also copy a directory and all of its contents recursively by adding the -R flag:
+
+cp -R my_dir new_dir
+
+On most Linux systems, the -r and -R flags for cp both mean "recursive." We used lowercase -r with rm earlier and uppercase -R here, but either will work for recursive copy on most distros.
+
+Assignment
+Take a look inside the worldbanc/private/transactions/ directory. You should see a few files containing transactions from different years.
+Look inside the backups directory inside of transactions. It looks like something is missing!
+Copy the missing file from the transactions directory into the backups directory so there is a backup of all of the transactions.
+List the contents of the backups directory and paste the output without the command into the input field and submit it.

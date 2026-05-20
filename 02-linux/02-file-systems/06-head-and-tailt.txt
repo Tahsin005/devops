@@ -1,0 +1,49 @@
+head and tail
+Sometimes you don't want to print everything in a file. Files can be really big after all.
+
+The head Command
+The head command prints the first n lines of a file. The -n flag specifies n as shown:
+
+head -n 10 file1.txt
+
+If you don't specify a number using the -n flag, it will default to 10.
+
+The tail Command
+The tail command prints the last n lines of a file. The -n flag specifies n as shown:
+
+tail -n 10 file1.txt
+
+Assignment
+Time to start investigating the bank's transactions.
+
+Use the cd command to get into the worldbanc/private/transactions/ directory.
+
+Run the cat command to view the contents of the 2023.csv file. You'll notice that it's a really long file. We don't want to print the whole thing.
+
+Use the head command to print the first 6 lines of the 2023.csv file and copy them into the input field – do not submit yet
+
+We print the first 6 lines because the first line in the file is the header, and we want to include that along with the first 5 transactions.
+
+Use the tail command to print the last 5 lines of the 2023.csv file and copy them into the input field
+
+Submit the combined first 6 and last 5 lines, for a total of 11 lines.
+
+Tips
+Remember, you can use .. as an alias for a parent directory. So if you're in worldbanc/private/transactions/ and you want to get to worldbanc, you can run cd .. twice:
+
+cd ..
+cd ..
+
+Alternatively, you can just run:
+
+cd ../..
+
+once.
+
+You can run multiple commands on a single line by separating them with a semicolon (;).
+
+command1 ; command2
+
+The second command runs immediately after the first command finishes. If you only want to run the second command if the first succeeds, then you can use &&:
+
+command1 && command2

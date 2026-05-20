@@ -1,0 +1,16 @@
+grep Multiple Files
+You can also search multiple files at once. For example, if we wanted to search for the word "hello" in hello.txt and hello2.txt, we could run:
+
+grep "hello" hello.txt hello2.txt
+
+Recursive Search
+You can also search an entire directory, including all subdirectories. For example, to search for the word "hello" in the current directory and all subdirectories:
+
+grep -r "hello" .
+
+The . is a special alias for the current directory.
+
+Assignment
+Use the grep command to find all the lines with the text "CRITICAL" (all caps) in the worldbanc/private/logs directory.
+
+Paste the output of your grep command into the input field and submit it.

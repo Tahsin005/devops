@@ -1,0 +1,40 @@
+Symbolic Links
+A symbolic link, usually called a symlink for short, is a special kind of file that points to another file or directory.
+
+It's a lot like a shortcut in a GUI. The symlink has its own path, but when you use it, the operating system follows the link to the target.
+
+Link Command
+The ln command creates links. To create a symbolic link, use the -s flag:
+
+ln -s target_path link_path
+
+Note, the path to the target comes first, then the path where the symlink will be created. For example:
+
+ln -s documents/important.txt important.txt
+
+That creates a symlink in the current directory named important.txt, which points to documents/important.txt.
+
+You can use either a relative or an absolute path for the target. Both options have tradeoffs!
+
+If you use an absolute path, you can usually move the symlink without a problem, but moving the target will break the symlink. If you use a relative path, the symlink will continue to work as long as its position relative to the target stays the same. For example, you could move a parent directory containing both the symlink and the target.
+
+Symlinks vs. Copies
+A symlink is not the same as a copy: it doesn't duplicate the file's contents. It just creates another path that points to the original. That means:
+
+If the target file changes, the symlink shows the new contents.
+If you delete the symlink, the target file still exists.
+If you delete the target file, the symlink breaks.
+You can use ls -l to see where a symlink points:
+
+important.txt -> documents/important.txt
+
+Assignment
+WorldBanc's T-Bills product used to live in the credit_cards directory, but now it's in investments where it belongs. Unfortunately, some old documentation still expects to find it at the old path.
+
+Create a symbolic link so the old path still works, without creating a second copy of the file.
+
+Make sure tbills.txt is still in the worldbanc/public/products/investments directory.
+Create a symlink named tbills.txt in the worldbanc/public/products/credit_cards directory.
+The symlink should point to the existing tbills.txt file in the investments directory. Use a relative target.
+Run ls -l on the credit_cards directory to confirm that the symlink exists.
+Paste the line from ls -l that shows the tbills.txt symlink and submit it.

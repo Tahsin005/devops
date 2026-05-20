@@ -1,0 +1,22 @@
+What Is a Filesystem?
+All the data stored on your computer is organized into files and directories. Files and directories are organized into a tree-like structure called a filesystem.
+
+
+
+Directories (or "folders" on Windows) are just containers that hold files and other directories.
+Files are just a dump of raw binary data: 1's and 0's. The bytes in a file can represent anything: text, images, videos, etc.
+The filesystem tree starts with a single directory called the root directory. The root directory contains files and directories, which can contain more files and directories, and so on.
+
+When you open your terminal, your working directory (the one you're "in") is going to be... somewhere. Most commonly it is your "home" directory.
+
+Assignment
+You've remotely logged onto a suspicious employee's machine at WorldBanc. First, you need to determine where on their filesystem you are...
+
+Run the "print working directory" command to see the filepath of your current working directory:
+pwd
+
+Paste the full output of the command into the text field and submit it. (Be sure you're not running these commands in the default Windows terminal or else the output will not pass.)
+
+
+
+-- /home/tahsin005/Downloads/Codes/bits-and-pieces/devops/02-linux

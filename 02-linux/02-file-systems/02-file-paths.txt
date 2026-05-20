@@ -1,0 +1,54 @@
+Filepaths
+The output of pwd is a filepath. A filepath is a string that describes the location of a file or directory on your computer. Yours should look something like this:
+
+Linux/Windows WSL
+/home/wagslane
+
+The first slash (/) represents the root directory. It's the tippy-top of the filesystem tree.
+The next part (home) is the name of a directory inside the root directory.
+Finally, the last part (wagslane) is the name of a directory inside the home directory.
+So this path represents a directory 2 levels down from the root directory:
+
+root
+  └── home
+        └── wagslane
+
+macOS
+Linux Filepath
+Click to hide video
+
+Assignment
+Time to start digging for evidence. If you're on Windows, again, make sure you're in the Ubuntu (WSL) terminal.
+
+Copy/paste and run the command below to download the worldbanc directory from GitHub. It contains files and directories that you'll need throughout this course. If prompted for a password, use the password for your machine's user account, or the one you used when setting up Ubuntu in WSL.
+
+If you run into an issue, see the troubleshooting tips below. We'll cover what these commands do later.
+
+curl -L https://github.com/bootdotdev/worldbanc/archive/refs/heads/main.zip -o worldbanc.zip
+unzip worldbanc.zip
+rm worldbanc.zip
+mv worldbanc-main worldbanc
+sudo chown -R $(whoami) worldbanc
+sudo chmod -R 755 worldbanc
+
+You should now have a worldbanc directory in your current working directory. When learning terminal commands in this course, it's possible to make a mistake and ruin your version of the worldbanc repo. If that happens, just come back to this lesson and download worldbanc again.
+
+Run the "list" command to see the contents of your current working directory:
+
+ls
+
+You should see a worldbanc directory listed.
+
+Run the "change directory" command to move into the worldbanc directory:
+
+cd worldbanc
+
+Use the ls command again to see the contents of the worldbanc directory. Paste the console output into the text field and submit your answer.
+
+Troubleshooting
+If you're having issues with the download due to curl or unzip not being installed on Ubuntu/WSL, you can install them with the following commands:
+
+sudo apt install unzip
+sudo apt install curl
+
+Certain Windows versions may not let you paste into the Command Line. See how to enable ctrl+shift+v.
