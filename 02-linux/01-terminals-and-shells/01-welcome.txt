@@ -1,0 +1,6 @@
+Assignment
+Find and open a terminal on your computer (see below for instructions).
+Type the following command and press enter:
+echo "Hello world"
+
+When you're done, answer the question.

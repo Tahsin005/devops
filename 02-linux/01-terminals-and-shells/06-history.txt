@@ -1,0 +1,17 @@
+History
+When you're working in a REPL, it's really helpful to be able to see the commands you've typed in the past. That way you can easily re-run them, or copy and paste them into a script. To print out the history of commands you've typed in your shell, you can use the history command.
+
+history
+
+Assignment
+In your shell, set 2 variables:
+department to engineering
+team to ops
+Use echo to print the following message (using the $department and $team variables):
+I work in engineering on ops
+Run the history command and paste its full output into the text field, including the variables you set and the final echo command.
+
+
+-- 1  department="engineering"
+-- 2  team="ops"
+-- 3  echo I work in $department on $team

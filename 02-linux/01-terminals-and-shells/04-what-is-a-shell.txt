@@ -1,0 +1,56 @@
+What Is a Shell?
+So if your terminal is just a program that lets you issue text-based commands and renders the output of those commands...
+
+...What is the program that runs those commands???
+
+That's a shell.
+
+Shells do a lot of things, but their main job is to interpret the commands you type and execute them.
+
+REPL
+Shells are often referred to as "REPLs." REPL stands for
+
+Read
+Eval (evaluate)
+Print
+Loop
+This is a fancy way of saying that shells are programs that:
+
+Read the commands you type
+Evaluate those commands, usually by running other programs on your computer
+Print the output of those commands
+Give you a new prompt to type another command and repeat
+
+Assignment
+In your own shell in another window (not the text box on the right), run the following command:
+
+expr 123456 + 7890
+
+If you're on Windows, use your WSL Ubuntu shell for this and all future lessons.
+
+Paste the output of that command into the text box on the right.
+
+Tip
+If you're confused about prompts vs outputs, here's a quick explanation.
+
+wagslane@MacBook-Pro ~ % echo hello
+hello
+wagslane@MacBook-Pro ~ %
+
+In the example above, I started with an empty prompt and typed echo hello and pressed enter.
+
+wagslane@MacBook-Pro ~ % echo hello
+
+The shell ran that command, and printed the output:
+
+hello
+
+Finally, it gave me a new prompt to type another command:
+
+wagslane@MacBook-Pro ~ %
+
+
+
+what did expr 123456 + 7890 print?
+
+-- 131346

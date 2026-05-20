@@ -1,0 +1,19 @@
+What Is a Terminal?
+As we talked about, the terms "shell," "CLI," and "terminal" are often used to refer to the same thing: a program for issuing text-based commands.
+
+But to get pedantic, the "terminal" is just one specific part of that program. Historically, the word "terminal" meant a physical device that you could type commands into, essentially a keyboard and a screen.
+
+
+
+These days, when we say "terminal," we really mean "terminal emulator." A terminal emulator is a program that emulates a physical terminal. It's a program that lets you type commands into a window on your computer.
+
+Which commands you're able to use isn't determined by the terminal emulator, but by the shell, which we'll talk about later.
+
+Your terminal emulator is just responsible for drawing text on the screen and processing your keystrokes.
+
+
+
+
+A terminal (or terminal emulator)...
+
+-- is a program that accepts text based commands and can render text on the screen
