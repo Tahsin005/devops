@@ -1,0 +1,34 @@
+Chown
+So when do you need to use sudo? chmod allows you to change the permissions of any file or directory that you own. But what if you don't own the file or directory? That's where sudo is required. Let's change ownership of a directory to see how that works.
+
+The chown command, which stands for "change owner," allows you to change the owner of a file or directory, and it requires root privileges.
+
+Assignment
+Change directory into worldbanc/private. Take a look at the contents with ls.
+
+You should see a directory called contacts. Take a look at its contents.
+
+You should see a file called emergency.txt. Take a look at the data inside with cat.
+
+Hmmm, it seems like it has some personal contact info for employees. We don't know whose this is, but we're pretty sure it should have its access strictly limited.
+
+Let's change the owner of the entire contacts directory to root. Run this command in worldbanc/private directory:
+
+sudo chown -R root contacts
+
+Here's an explanation of the command:
+
+sudo – Run as the root user
+chown – Command to change the owner
+-R – "Recursive," meaning also apply the changes to everything inside the directory
+root – The name of the new owner
+contacts – The directory to change the owner of
+From the worldbanc/private directory, run:
+
+ls -l
+
+Find the line from the output that represents the contacts directory. Copy the whole line into the input field and submit your answer.
+
+
+
+drwx------ 1 root      tahsin005  26 Jan 13  2025 contacts
