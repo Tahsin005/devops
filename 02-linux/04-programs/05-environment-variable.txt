@@ -1,0 +1,55 @@
+Environment Variables
+We talked about how you can create and use local variables in your shell:
+
+name="Lane"
+echo $name
+# Lane
+
+There is another type of variable called an environment variable. They are available to all programs that you run in your shell.
+
+You can view all of the environment variables that are currently set in your shell with the env command.
+
+To set a variable for your current shell session, use the export command (it won't persist if you close the terminal):
+
+export NAME="Lane"
+
+You can then use the variable in your shell, just as before:
+
+echo $NAME
+# Lane
+
+The interesting part is that programs and scripts you run in your shell can also use that variable:
+
+For example, we can create a file called introduce.sh with the following contents:
+
+#!/bin/sh
+echo "Hi I'm $NAME"
+
+Then we run it:
+
+chmod +x ./introduce.sh
+
+./introduce.sh
+# Hi I'm Lane
+
+Assignment
+Take a look at the contents of the warn.sh script in the worldbanc/private/bin directory. It looks like it's supposed to print nicely formatted warning messages with worldbanc branding.
+
+In your terminal, export the required environment variables:
+
+WARN_MESSAGE: "The auditor is here"
+WARN_FROM_NAME: "Your worst nightmare"
+Run the script and paste its full output into the input field and submit your answer.
+
+Tip
+You can also temporarily set a variable for a single command, instead of exporting it for the whole session.
+
+For example:
+
+WARN_MESSAGE="this works too" ./warn.sh
+
+
+
+-- export WARN_MESSAGE="The auditor is here"
+
+-- export WARN_FROM_NAME="Your worst nightmare"
