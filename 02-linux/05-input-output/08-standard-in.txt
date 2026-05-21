@@ -1,0 +1,19 @@
+Standard In
+If there's a standard output, there must be a standard input, right?
+
+"Standard Input", usually called "standard in" or stdin, is the default place where programs read their input. It's just a stream of data that programs can read from as they run.
+
+All major programming languages provide a simple way to read from stdin. In Python, it's the input function:
+
+# execution stops until the user types
+# something (in this case "Lane") and presses enter
+name = input("What is your name? ")
+
+print("Hello,", name)
+# Hello, Lane
+
+In a shell, it's the read command:
+
+read name
+echo "Hello, $name"
+# Hello, Lane

@@ -1,0 +1,14 @@
+Kill
+Sometimes a program is in such a bad state (or is so malicious) that it doesn't respond to the SIGINT, in which case the best option is to use another shell session (new terminal window) to manually kill the program.
+
+Syntax
+kill <PID>
+
+PID stands for "process ID." Every process that's running on your machine has a unique ID. The ps, "process status" command can be used to list the processes running on your machine, and their IDs:
+
+ps aux
+
+The "aux" options just mean "show all processes, including those owned by other users, and show extra information about each process."
+
+Tip
+Run ps aux | head -n 1 to see the header row of the ps aux table.

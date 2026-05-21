@@ -1,0 +1,31 @@
+Exit Codes
+Exit codes (sometimes called "return codes" or "status codes") are how programs communicate back whether they ran successfully or not.
+
+0 is the exit code for success. Any other exit code is an error. 9 times out of 10, if a non-zero exit code is returned (meaning an error) it will be 1, which is the "catch-all" error code.
+
+Programs that call other programs use error codes to figure out if execution was successful. For example, if the Boot.dev server program exits with a non-zero exit code, we have another program that will automatically restart it and log the error.
+
+In a shell, you can access the exit code of the last program you ran with the question mark variable ($?). For example, if you run a program that exits with a non-zero exit code, you can see what it was with the echo command:
+
+ls ~
+echo $?
+# 0
+
+ls /does/not/exist
+echo $?
+# non-zero (depends on your OS)
+
+Assignment
+Commands will usually exit with error codes if they've been run without the proper arguments or configuration. For example, the private/bin/warn.sh script will exit with a non-zero code if you don't have the required environment variables set.
+
+Run the warn.sh script without setting the two environment variables (WARN_MESSAGE and WARN_FROM_NAME) that it requires.
+Run the echo command to see the exit code.
+Paste just the exit code in the text box and submit your answer.
+
+Tips
+You can use the unset command to unset an environment variable:
+unset ENV_VAR_NAME
+
+Alternatively, you can set the environment variable to an empty string:
+
+export ENV_VAR_NAME=""
