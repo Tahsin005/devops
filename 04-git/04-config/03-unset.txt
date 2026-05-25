@@ -1,0 +1,14 @@
+Unset
+The unset subcommand is used to remove a configuration value. For example:
+
+git config unset <key>
+
+Assignment
+Remove the webflyx.cto key from your local Git configuration, and verify that it was removed.
+
+Try using unset to remove the entire webflyx section. Then answer the multiple-choice question.
+
+
+What happened when you tried to unset the webflyx section?
+
+-- It failed becase it can't unset an entire section, it needs a key.

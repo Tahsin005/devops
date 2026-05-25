@@ -1,0 +1,22 @@
+Duplicates
+Typically, in a key/value store, like a Python dictionary, you aren't allowed to have duplicate keys. Strangely enough, Git doesn't care.
+
+Unset All
+The unset --all command is useful if you ever really want to purge all instances of a key from your configuration. Conversely, the unset subcommand by itself only works with a single instance of a key.
+
+git config unset --all example.key
+
+Assignment
+While only the most unhinged of projects operate this way, some projects, including WebFlyx, allow for multiple CEOs. Let's add a few more CEOs to the WebFlyx configuration (note the --append flag):
+
+git config set --append webflyx.ceo "Warren"
+git config set --append webflyx.ceo "Carson"
+git config set --append webflyx.ceo "Sarah"
+
+Take a look at your new cursed configuration:
+
+git config list --local
+
+Remove all the CEOs from the WebFlyx configuration at once using unset --all.
+
+Run and submit the CLI tests.

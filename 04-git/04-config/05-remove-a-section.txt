@@ -1,0 +1,11 @@
+Remove a Section
+As I pointed out before, the webflyx section is nonsensical because Git doesn't use it for anything. While we can store any key/value pairs we want in our Git configuration, that doesn't mean we should.
+
+The remove-section subcommand is used to remove an entire section from your Git configuration. For example:
+
+git config remove-section <section>
+
+Assignment
+Remove the entire webflyx section from your local Git config. You might notice that the default "core" section is still there; that's okay.
+
+Run and submit the CLI tests from the root of the webflyx directory.

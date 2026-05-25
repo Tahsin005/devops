@@ -1,0 +1,13 @@
+Get
+We've used list to see all the configuration values, but the get subcommand is useful for getting a single value.
+
+git config get <key>
+
+Keys are in the format <section>.<keyname>. For example:
+
+user.name
+webflyx.ceo
+Assignment
+Use the get subcommand to get the value of the webflyx.valuation key from your local Git configuration.
+
+Run and submit the CLI tests.
