@@ -1,0 +1,30 @@
+Visualizing Branches
+Throughout the rest of this course, we will use text to represent branches and commits. For example:
+
+A - B - C  main
+
+means a branch called main with 3 commits. C is the most recent commit (the tip), B is the previous commit, and A is the commit before that. To represent multiple branches, we'll use multiple lines:
+
+    D - E  other_branch
+  /
+A - B - C  main
+
+Assignment
+Answer the questions based on this diagram:
+
+       G - H    lanes_branch
+      /
+A - B - C - D   main
+  \
+   E - F        primes_branch
+
+
+
+Which commits are part of lanes_branch?
+-- ABGH
+
+Which commits are part of main?
+-- ABCD
+
+Which commits are part of primes_branch?
+-- AEF

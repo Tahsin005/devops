@@ -1,0 +1,20 @@
+New Branch
+You should already be on the main branch: your "default" branch. You can always check with git branch.
+
+Two Ways to Create a Branch
+git branch my_new_branch
+
+This creates a new branch called my_new_branch. The thing is, I rarely use this command because usually I want to create a branch and switch to it immediately. So I use this command instead:
+
+git switch -c my_new_branch
+
+The switch command allows you to switch branches. Including the -c flag tells Git to create a new branch and switch to it.
+
+When you create a new branch, it uses the current commit you are on as the branch base. For example, if you're on your main branch with 3 commits, A, B, and C, and then you run git switch -c my_new_branch, your new branch will look like this:
+
+
+
+Assignment
+Create and switch to a new branch called add_classics, it should have the same commits as the main branch.
+Run git branch to verify that you are on the new branch.
+Run and submit the CLI tests.
