@@ -1,0 +1,14 @@
+Cat File
+Luckily, Git has a built-in plumbing command, cat-file, that allows us to see the contents of a commit without needing to futz around with the object files directly.
+
+git cat-file -p <hash>
+
+Assignment
+Use the cat-file command to view the contents of your last commit. (Use -p for pretty-print.)
+For the CLI to be able to check your output, do it again, but redirect the output to a temporary file:
+catfile-command-here > /tmp/catfileout.txt
+
+Run and submit the CLI tests.
+
+Tip
+Use git log -1 to get the hash of your last commit.

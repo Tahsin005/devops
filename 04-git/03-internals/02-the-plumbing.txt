@@ -1,0 +1,17 @@
+The Plumbing
+So far we've been using Git in a "porcelain" manner. But to sate our insatiable curiosity, let's take a look at some of the "plumbing".
+
+It's Just Files All the Way Down
+All the data in a Git repository is stored directly in the (hidden) .git directory. That includes all the commits, branches, tags, and other objects we'll learn about later.
+
+Git is made up of objects that are stored in the .git/objects directory. A commit is just a type of object.
+
+Assignment
+Use git log -n 10 to find your commit hash again.
+Use ls -l .git/objects to list the contents of the .git/objects directory.
+Look for a directory that matches the first two characters of your commit hash.
+Use ls -al .git/objects/XX/ (replacing XX with your two characters) to list the contents of that directory. You should see a file whose name is the remaining characters of the hash. For the question, provide the full path to that object file (not just the directory).
+
+
+
+
