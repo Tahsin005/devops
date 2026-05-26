@@ -1,0 +1,46 @@
+Merge
+"What's the point of having multiple branches?" you might ask. They're most often used to safely make changes without affecting your (or your team's) primary branch. However, once you're happy with your changes, you'll want to merge them back into the main branch so that they make their way into the final product.
+
+Visual
+Let's say you're in a state where you have two branches, each with their own unique commits:
+
+A - B - C    main
+   \
+    D - E    other_branch
+
+If you merge other_branch into main, Git combines both branches by creating a new commit that has both histories as parents. In the diagram below, F is a merge commit that has C and E as parents. F brings all the changes from D and E back into the main branch.
+
+A - B - C - F    main
+   \     /
+    D - E        other_branch
+
+Assignment
+Switch back to main. Next, our contents.md file is eerily empty... update it to contain:
+# contents
+
+- titles.md: The movie titles in the WebFlyx collection
+- classics.csv: A comma-separated list of classic movies
+- quotes: A directory of files containing memorable quotes from movies
+
+Commit the changes with a message starting with E:. We should now have a commit history that looks like this:
+A - B - C - E    main
+         \
+           D     add_classics
+
+Run git log --oneline --graph --all and you should see a nice ASCII art representation of your commit history.
+
+git log --graph docs
+git log --all docs
+Run and submit the CLI tests.
+
+
+
+
+
+webflyx main ❯ git log --oneline --graph --all
+* 51dc519 (HEAD -> main) E: update contents.md
+| * 2a08f3b (add_classics) D: add classics.csv file
+|/  
+* b6b19e6 C: add quotes
+* be531de B: add titles
+* 8e6b6be A: add contents.md

@@ -1,0 +1,20 @@
+Fast Forward Commit
+Here's a diagram of a fast-forward merge. Before:
+
+      C     other_branch
+     /
+A - B       main
+
+After git merge other_branch:
+
+            other_branch
+A - B - C   main
+
+No merge commit is created.
+
+Assignment
+Switch back to the main branch.
+Make sure it doesn't have that last G commit with a quick git log.
+Merge the update_titles branch into main. You should see a fast-forward merge happen automatically because main doesn't have any commits that aren't already in update_titles.
+Delete the update_titles branch.
+Run and submit the CLI tests.

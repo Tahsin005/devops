@@ -1,0 +1,41 @@
+Fast Forward Merge
+The simplest type of merge is a fast-forward merge. Let's say we start with this:
+
+      C     delete_vscode
+     /
+A - B       main
+
+And we run this while on main:
+
+git merge delete_vscode
+
+Because delete_vscode has all the commits that main has, Git automatically does a fast-forward merge. It just moves the pointer of the "base" branch to the tip of the "feature" branch:
+
+            delete_vscode
+A - B - C   main
+
+Notice that with a fast-forward merge, no merge commit is created.
+
+This is a common workflow when working with Git on a team of developers:
+
+Create a branch for a new change
+Make the change
+Merge the branch back into main (or whatever branch your team dubs the "default" branch)
+Remove the branch
+Repeat
+Assignment
+Because the add_classics branch has been merged into main, we don't need it anymore.
+
+Delete the add_classics branch:
+git branch -d add_classics
+
+Create a new branch off main called update_titles. You can use git switch -c.
+Update titles.md by adding "The Curious Case of Benjamin Button" as the final entry in the list of movies.
+Commit the update to that branch. Use G: to prefix the commit message.
+Run git log --oneline to make sure the commit is there.
+Run and submit the CLI tests from the update_titles branch.
+
+
+
+
+

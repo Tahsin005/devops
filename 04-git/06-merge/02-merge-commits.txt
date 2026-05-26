@@ -1,0 +1,59 @@
+Merge Commits
+A merge commit is the result of merging two branches together.
+
+Click to hide video
+
+Let's say we start with this:
+
+A - B - C    main
+   \
+    D - E    vimchadsonly
+
+And we merge vimchadsonly into main by running this while on main:
+
+git switch main
+git merge vimchadsonly
+
+The merge will:
+
+Find the "merge base" commit, or "best common ancestor" of the two branches. In this case, A.
+Replay the changes from main, starting from the best common ancestor, into a new commit.
+Replay the changes from vimchadsonly onto main, starting from the best common ancestor.
+Records the result as a new commit, in our case, F.
+F is special because it has two parents, C and E.
+After:
+
+A - B - C - F    main
+   \     /
+    D - E        vimchadsonly
+
+Assignment
+Your current webflyx commit history should look like this:
+
+A - B - C - E    main
+         \
+           D     add_classics
+
+Merge the changes from the add_classics branch into the main branch. You will be presented with a code editor to change the commit message. Update the message to start with F:. Aside from that, use the default message. E.g. F: Merge branch 'add_classics'.
+Save the file, and close the editor. See the tips below if you don't know how to exit the editor.
+From the main branch run git log --oneline --graph --parents. This should give you a nice visual representation of the merge commit.
+Run and submit the CLI tests while still on main.
+
+Tips
+Remember, if you mess up a commit message, you can change it with the --amend flag. For example:
+
+git commit --amend -m "F: Merge branch 'add_classics'"
+
+If you prefer VS Code over Vim, run this command to make it your default editor:
+
+git config --global core.editor "code --wait"
+
+To save and exit the editor:
+
+Vim: Press I to enter Insert Mode, then type. To save, press Esc, type :wq, and hit Enter.
+Nano: Type immediately. To save, press Ctrl+X, then Y, and Enter.
+VS Code: Type, save (Ctrl+S), and close the window to finish.
+
+
+
+
