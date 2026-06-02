@@ -1,0 +1,13 @@
+Undoing Changes
+One of the major benefits of using Git is the ability to undo changes. There are a lot of different ways to do this, but first, we'll start by going back in the commit history without discarding changes.
+
+Assignment
+The new intern at Webflyx tried to add his favorite movie to the titles.md file, but overwrote the entire file by mistake!
+
+To simulate that on the update_dune branch, overwrite titles.md with the line * The Internship.
+You can do so with this command:
+
+echo "* The Internship" > titles.md
+
+Make sure the file is changed by running git status, then commit the changes. (Use a commit message starting with J:)
+Run and submit the CLI tests.
