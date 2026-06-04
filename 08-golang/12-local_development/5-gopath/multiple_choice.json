@@ -1,0 +1,6 @@
+{
+  "question": "Do you need to put your code inside of your GOPATH?",
+  "answers": [
+    "No, in fact you shouldn't"
+  ]
+}
