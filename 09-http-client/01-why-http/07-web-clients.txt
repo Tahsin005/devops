@@ -1,0 +1,4 @@
+The 'front-end' of a website is a... web client
+
+A mobile phone is often used as an... http client
+

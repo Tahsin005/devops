@@ -1,0 +1,3 @@
+Good web servers are listening for requests...  always
+
+A server is the ____ of an application  ... Backend
